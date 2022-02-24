@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container{border:solid; width:50%;background-color: cornflowerblue; height:483px; margin: auto;align-items:center;text-align: center; font-size: 20px; text-transform: capitalize; }
+        input{margin-top: 25px;}
+        select{margin-top: 25px;}
+       #amount{border:none; float:right; width:40%; height:30px;margin-top: 100px; background-color:rgb(26, 165, 72);color:floralwhite;}
+       .amount1{border:none; float:left; width:40%; height:30px;margin-top: 100px;background-color:rgb(26, 165, 72);color:floralwhite;}
+       #year2{border:none;float:right; width:40%; height:30px;margin-top: 20px;background-color:rgb(26, 165, 72);color:floralwhite;}
+       .year1{border:none;float:left; width:40%; height:30px;margin-top: 20px;background-color:rgb(26, 165, 72);color:floralwhite;}
+       #interest2{border:none;float:right; width:40%; height:30px;margin-top: 20px;background-color:rgb(26, 165, 72);color:floralwhite;}
+       .interest1{border:none;float:left; width:40%; height:30px;margin-top: 20px;background-color:rgb(26, 165, 72);color:floralwhite;}
+       #interestamount2{border:none;float:right; width: 40%; height:30px;margin-top: 20px;background-color:rgb(26, 165, 72);color:floralwhite;}
+       .interestamount1{border:none;float:left; width: 40%; height:30px;margin-top: 20px;background-color:rgb(26, 165, 72);color:floralwhite;}
+       .select{margin-left: 30px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        amount : <input type="text" id="t"><br>
+        interest rate : <select class="select">
+            <option id="rate">5</option>
+            <option id="rate">6</option>
+            <option id="rate">7</option>
+            <option id="rate">8</option>
+            <option id="rate">9</option>
+            <option id="rate">10</option>
+            <option id="rate">11</option>
+            <option id="rate">12</option>
+            <option id="rate">13</option>
+            <option id="rate">14</option>
+            <option >15%</option>
+            <option >15%</option>
+        </select><br>
+        no of years : <input type="text" id="int"><br>
+        <input type="button" value="calculate interest" onclick="amount()" ><br>
+        <div class="amount1" > amount</div>
+        <div id="amount"></div>
+        <br>
+        <div class="interest1">interestrate</div>
+        <div id="interest2"></div>
+        <br>
+        <div class="year1">no of years</div>
+        <div id="year2"></div>
+        <br>
+        <div class="interestamount1">interest amount</div>
+        <div id="interestamount2"></div>
+    </div>
+    
+        
+    
+</body>
+</html>
+<script>
+    function amount()
+    {
+       var amount=document.getElementById("t").value;
+        document.getElementById("amount").innerHTML=amount;
+        var years=document.getElementById("int").value;
+        document.getElementById("year2").innerHTML=years;
+        var interest=document.getElementById("rate").value;
+        document.getElementById("interest2").innerHTML=interest;
+         var a=document.getElementById("rate").value;
+        document.getElementById("interest2").innerHTML=a;
+        var r=(amount*years*interest)/100;
+        document.getElementById("interestamount2").innerHTML=r;
+    }
+</script>
